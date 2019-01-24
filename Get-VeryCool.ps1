@@ -16,11 +16,15 @@ Function Get-VeryCool {
     Param (
         [string[]]$User
     )
-    Begin { }
+    Begin {
+        # Something should go here.
+    }
     Process {
         Write-Host "$user is cool."
         Write-Host "brrr."
         Write-Host "Now, $user is very cool!"
     }
-    End { }
+    End {
+        # Something should go here too.
+    }
 }
