@@ -15,10 +15,14 @@ Param (
 Begin {
 
 }
-Progress {
-    $TimeZone = Get-WmiObject -Class Win32_TimeZone -ComputerName $computer
-    $RemoteTime = Get-WmiObject -Class Win32_LocalTime -ComputerName $computer
+Process {
+    $TimeZone = Invoke-Command -ComputerName $computer {
+        Get-CimInstance -ClassName Win32_TimeZone
+    }
+    $RemoteTime = Invoke-Command -ComputerName $ComputerName {
+        Get-CimInstance -ClassName Win32_LocalTime
+    }
 }
 End {
-    
+        
 }
