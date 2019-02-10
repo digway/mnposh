@@ -20,5 +20,6 @@ Progress {
 	$RemoteTime = Get-WmiObject -Class Win32_LocalTime -ComputerName $computer
 }
 End {
-	# Bye
+    # Bye
+    Write-Debug "About to Exit."
 }
