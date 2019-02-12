@@ -22,4 +22,5 @@ Progress {
 End {
     # Bye
     Write-Debug "About to Exit."
+    # I mean it closing.
 }
